@@ -1,0 +1,31 @@
+1.¿Qué parte del algoritmo se paralelizó?
+  Respuesta: La parte del algoritmo que se paralelizó fue la búsqueda de soluciones
+  por columna para cada hilo.
+
+2.¿Por qué se eligió repartir el primer renglón?
+  Respuesta: Se fija una reina en cada columna y a partir de ahi se buscan
+  soluciones.
+
+3.¿Cada hilo comparte la misma lista de tableros o tiene su propia lista?
+  Respuesta: Cada hilo tiene su propia lista.
+
+4.¿Por qué se usa join()?
+  Respuesta: Para esperar a que cada hilo termine su trabajo.
+
+5.¿Qué pasaría si el programa principal no esperara a cada uno de los hilos?
+  Respuesta: Se podría esperar un total de soluciones igual a cero ya que el
+  hilo principal calcularia las soluciones totales antes de que permitir que
+  termine cada uno de los hilos.
+
+6.¿Por qué no se necesita synchronized en esta versión?
+  Respuesta: Porque cada hilo maneja su propia lista.
+
+7.¿El número de hilos debe ser siempre igual al número de procesadores?
+  Respuesta: No, el número de hilos no debe ser igual al numero de procesadores.
+  Para determinar el numero de hilos se usa la funcion min(procesadores_disponibles,
+  tamanio del tablero). Debemos considerar que habrá otros hilos en ejecución que 
+  esten utilizando procesadores.
+
+8.¿La versión paralela siempre será más rápida que la secuencial?
+  Respuesta: No, al tener multiples hilos en ejecución el sistema puede suspender
+  uno o mas de estos hilos suponiendo asi  un retraso en la ejecución del algoritmo.
