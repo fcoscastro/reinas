@@ -35,3 +35,7 @@ javac Tablero.java Reina.java
 ```bash
 java Reina
 ```
+
+## Evidencia de ejecución
+
+![Programa en ejecucion](img.png "Imagen")
